@@ -12,5 +12,5 @@ jobs:
                   password: ${{ secrets.PASSWORD }}
                   port: ${{ secrets.PORT }}
                   script: |
-                    cd ~/Projects/Go/action-test
+                    cd ~/arif/action-test
                     git pull origin master
