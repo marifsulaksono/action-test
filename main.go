@@ -35,7 +35,6 @@ func main() {
 	// server := new(http.Server)
 	// server.Addr = address
 	err := http.ListenAndServe(address, nil)
-	// err := server.ListenAndServe()
 	if err != nil {
 		fmt.Println(err.Error())
 	}
