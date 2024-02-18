@@ -30,8 +30,8 @@ func main() {
 		w.Write([]byte("Hello again!"))
 	})
 
-	var address = "localhost:9000"
-	fmt.Printf("Server started at %s\n", address)
+	var address = ":9090"
+	fmt.Printf("Server started at localhost%s\n", address)
 	// server := new(http.Server)
 	// server.Addr = address
 	err := http.ListenAndServe(address, nil)
