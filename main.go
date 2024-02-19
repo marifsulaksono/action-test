@@ -19,7 +19,7 @@ func handlerHello(w http.ResponseWriter, r *http.Request) {
 func main() {
 	// ========== Routing, membuat multiplexer sendiri dengan memanfaatkan struct http.servemux
 	handlerIndex := func(w http.ResponseWriter, r *http.Request) {
-		w.Write([]byte("Hallo Dunia!"))
+		w.Write([]byte("Hallo Dunia!\nApakah dirimu baik-baik saja?"))
 	}
 
 	http.HandleFunc("/", handlerIndex)
@@ -31,7 +31,7 @@ func main() {
 	})
 
 	var address = ":9090"
-	fmt.Printf("Server started at localhost%s\n", address)
+	fmt.Printf("Server started at port %s\n", address)
 	// server := new(http.Server)
 	// server.Addr = address
 	err := http.ListenAndServe(address, nil)
