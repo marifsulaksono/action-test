@@ -19,7 +19,7 @@ func handlerHello(w http.ResponseWriter, r *http.Request) {
 func main() {
 	// ========== Routing, membuat multiplexer sendiri dengan memanfaatkan struct http.servemux
 	handlerIndex := func(w http.ResponseWriter, r *http.Request) {
-		w.Write([]byte("Hallo Dunia!\nApakah dirimu baik-baik saja?"))
+		w.Write([]byte("Hallo Dunia!\nApakah dirimu baik-baik saja?\nAku merindukan kedamaianmu."))
 	}
 
 	http.HandleFunc("/", handlerIndex)
